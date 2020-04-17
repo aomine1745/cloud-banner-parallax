@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.banner {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.banner:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 200px;
+	background-image: linear-gradient(to top ,#fff, transparent);
+}
+.banner .clouds {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.banner .clouds .cloud {
+	position: absolute;
+	bottom: 0;
+	max-width: 100%;
+	animation: animate calc(8s * var(--i)) linear infinite;
+}
+@keyframes animate {
+	0% {
+		transform: scale(1);
+		z-index: 1;
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+		z-index: 2;
+	}
+	80% {
+		opacity: 1;
+		z-index: 2;
+	}
+	100% {
+		transform: scale(3);
+		z-index: 2;
+		opacity: 0;
+	}
+}
+.banner .heaven {
+	position: relative;
+	font-size: 10em;
+	color: #fff;
+}
+.clouds {
+	width: 100%;
+}
+.container {
+	padding: 75px 100px;
+}
+.title {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
